@@ -37,8 +37,8 @@
 
 .face-pic {
   border-radius: 50%;
-  width: 170px;
-  height: 250px;
+  width: 200px;
+  height: 290px;
 }
 
 .black-alpha {
@@ -90,23 +90,46 @@ div.skills div div div {
 }
 
 .lang-legend {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  background-color: #60be86;
+  /*margin-top: 10px;
+  margin-bottom: 20px;*/
+  background-color: #D4DDE1;
 }
 
-dl
-     {
-         width: 200px;
-         background: #fff;
-         padding: 5px 15px;
-      }
+dl {
+  width: 200px;
+  background: #D4DDE1;
+  padding-top: 60px;
+}
 
-      dt
-      {
-         display: inline;
-         border: 1px solid #000;
-      }
+dt {
+  display: inline;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.skill-level-advanced {
+  width: 50px;
+  height: 100px;
+  /*border: 10px solid blue;*/
+  padding-right: 10px;
+  border-right: 30px solid blue;
+}
+
+.skill-level-intermediate {
+  width: 50px;
+  height: 100px;
+  /*border: 10px solid green;*/
+  padding-right: 10px;
+  border-right: 20px solid green;
+}
+
+.skill-level-beginner {
+  width: 50px;
+  height: 100px;
+  /*border: 10px solid red;*/
+  padding-right: 10px;
+  border-right: 10px solid red;
+}
 
 div.skills div div div i {
   margin-right: auto;
