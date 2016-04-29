@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="website">
 
     <head>
         <title>Tommaso | Landing Page</title>
@@ -9,6 +9,8 @@
         <meta name="theme-color" content="#00FF00">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/website.js"></script>
 
         <!-- CSS docs -->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -81,6 +83,34 @@
                         </li>
                         <li>
                           <a href="res/Tommaso_Pieroncini_Resume-2016.pdf" download target="_blank" class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">Resume</span></a>
+                        </li>
+                        </br>
+                        </br>
+                        <li ng-controller="MainCtrl">
+                          <a ng-click="toggleModal('Message Me!')" class="btn btn-default btn-lg"><i class="fa fa-comment fa-fw"></i> <span class="network-name">Message Me!</span></a>
+                          <modal visible="showModal">
+                            <form ng-submit="submit(message)" ng-controller="MessageForm" novalidate>
+                              </br></br>
+                              First name:
+                              </br>
+                              <input type="text" ng-model="message.firstname" required/></br></br>
+                              Last name:
+                              </br>
+                              <input type="text" ng-model="message.lastname" required/></br></br>
+                              </br>
+                              Email (if you want me to get back at you!):
+                              </br>
+                              <input type="text" ng-model="message.email"/></br></br>
+                              </br>
+                              Your message:</br>
+                              <textarea ng-model="message.text" cols="60" rows="8" required></textarea></br></br>
+                              </br>
+                              <button class="btn btn-default" type="submit"><span class="network-name"> Send</span></button>     
+                              <button class="btn btn-default" type="button" ng-click="reset()"><span class="network-name"> Reset</span></button>
+                              </br></br>
+                              <!--<pre>message = {{message | json}}</pre> -->
+                            </form>
+                          </modal>
                         </li>
                       </ul>
                     </div>
