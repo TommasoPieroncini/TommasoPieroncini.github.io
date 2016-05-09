@@ -19,12 +19,15 @@ website.controller('MessageForm', function ($scope, $http) {
     //http post req
     $http({
         method : "POST",
-        url : "http://sidsenkumar11.github.io/",
-        param: $scope.master
-    }).then(function mySucces(response) {
-        alert("success");
+        url : "http-128.61.104.207:8165/website/catchPost.php",
+        param: $scope.master,
+        headers: {'Content-Type': 'application/json'}
+    }).then(function mySuccess(response) {
+        $scope.data = response.data;
+        alert("Success!: " + $scope.data);
     }, function myError(response) {
-        alert("testing_error");
+        $scope.data = response.data || "Request Failed";
+        alert("testing_error: " + $scope.data);
     });
   }
 
