@@ -27,7 +27,7 @@ website.controller('MessageForm', function ($scope, $http) {
         alert("Success!: " + $scope.data);
     }, function myError(response) {
         $scope.data = response.data || "Request Failed";
-        alert("testing_error: " + $scope.data);
+        //alert("testing_error: " + $scope.data);
     });
   }
 
