@@ -19,8 +19,8 @@ website.controller('MessageForm', function ($scope, $http) {
     //http post req
     $http({
         method : "POST",
-        url : "http-128.61.104.207:8165/website/catchPost.php",
-        param: $scope.master,
+        url : "http://ec2-52-89-196-34.us-west-2.compute.amazonaws.com/website/catchPost.php",
+        data: $scope.master,
         headers: {'Content-Type': 'application/json'}
     }).then(function mySuccess(response) {
         $scope.data = response.data;
